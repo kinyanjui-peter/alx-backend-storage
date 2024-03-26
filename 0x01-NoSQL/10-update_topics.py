@@ -26,4 +26,5 @@ def update_topics(mongo_collection, name, topics):
         {"name": name},
         {"$set": {"topics": topics}},
         upsert=True
+    return updatedDocs
         )
