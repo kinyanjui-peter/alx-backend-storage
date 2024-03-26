@@ -9,7 +9,9 @@ from pymongo import MongoClient
 def log_nginx_stats(mongo_collection):
     """provides some stats about Nginx logs"""
     print(f"{mongo_collection.estimated_document_count()} logs")
+
     print("Methods:")
+
     for method in ["GET", "POST", "PUT", "PATCH", "DELETE"]:
         count = mongo_collection.count_documents({"method": method})
         print(f"\tmethod {method}: {count}")
