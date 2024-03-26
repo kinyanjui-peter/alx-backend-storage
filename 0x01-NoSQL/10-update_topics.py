@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-A Python function that changes all topics of a school document based on the name
+A Python function that changes all topics of a school document
+based on the name
 args:
     mongo_collection
     name
@@ -25,6 +26,4 @@ def update_topics(mongo_collection, name, topics):
         {"name": name},
         {"$set": {"topics": topics}},
         upsert=True
-        )    
-
-
+        )
