@@ -16,5 +16,5 @@ def schools_by_topic(mongo_collection, topic):
     if topic is None:
         return None
     filteredSchools = mongo_collection.find(
-        {"topic": topic})
+        {"topics": topic})
     return filteredSchools
