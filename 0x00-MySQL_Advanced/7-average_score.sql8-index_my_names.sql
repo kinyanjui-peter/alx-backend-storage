@@ -29,7 +29,7 @@ BEGIN
     WHERE id = user_id;
     
     -- Display a message indicating the completion of the procedure
-    SELECT 'Average score computed and updated for user with id: ', user_id;
+    SELECT CONCAT('Average score computed and updated for user with id: ', user_id) AS message;
 END$$
 
 -- Reset the delimiter back to semicolon
